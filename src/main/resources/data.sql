@@ -1,0 +1,22 @@
+insert into users(id, username, password, roles) values (1, 'user', 'userPass', 'ROLE_USER'), (2, 'admin', 'adminPass', 'ROLE_USER,ROLE_ADMIN');
+insert into project(name) values ('Project for Java'), ('Project for Spring'), ('Project for Hibernate');
+insert into subproject(name, project_id) values ('Java Core', 1), ('Java Collections', 1), ('Java Multithreading', 1),
+                                                ('Spring Boot', 2), ('Spring Data', 2), ('Spring MVC', 2), ('Spring Security', 2),
+                                                ('Hibernate Core', 3), ('Hibernate Entities', 3);
+insert into task(name, status, create_date, modified_date_status, info, type, users_id, project_id, subproject_id) values ('Task #1 on Java Core', 'DONE', current_date - 1, current_date , 'Java', 'TECHSPECIALIST', 1, null, 1),
+                                                                                                                          ('Task #2 on Java Core', 'NEW', current_date - 2, null, 'Java', 'TECHSPECIALIST', 1, null, 1),
+                                                                                                                          ('Task #1 on Project for Java', 'PROGRESS', current_date - 3, current_date - 3, 'Java', 'MANAGER', 2, 1, null),
+                                                                                                                          ('Task #1 on Java Multithreading', 'NEW', current_date, null, 'Java', 'TECHSPECIALIST', 2, null, 3),
+                                                                                                                          ('Task #2 on Java Multithreading', 'NEW', current_date, null, 'Java', 'TECHSPECIALIST', 1, null, 3),
+                                                                                                                          ('Task #1 on Spring Boot', 'NEW', current_date - 2, null, 'Spring', 'MANAGER', 2, null, 4),
+                                                                                                                          ('Task #2 on Spring Boot', 'DONE', current_date - 7, current_date - 3, 'Spring', 'TECHSPECIALIST', 1, null, 4),
+                                                                                                                          ('Task #1 on Spring Data', 'PROGRESS', current_date - 8, current_date - 5, 'Spring', 'TECHSPECIALIST', 1, null, 5),
+                                                                                                                          ('Task #2 on Spring Data', 'DONE', current_date - 1, current_date, 'Spring', 'TECHSPECIALIST', 1, null, 5),
+                                                                                                                          ('Task #1 on Project for Spring', 'PROGRESS', current_date - 3, current_date - 1, 'Spring', 'MANAGER', 2, 2, null),
+                                                                                                                          ('Task #2 on Project for Spring', 'DONE', current_date - 4, current_date - 1, 'Spring', 'MANAGER', 2, 2, null),
+                                                                                                                          ('Task #1 on Spring Security', 'NEW', current_date, null, 'Spring', 'TECHSPECIALIST', 1, null, 7),
+                                                                                                                          ('Task #1 on Hibernate Core', 'DONE', current_date - 2, current_date - 1, 'Hibernate', 'TECHSPECIALIST', 2, null, 8),
+                                                                                                                          ('Task #2 on Hibernate Core', 'DONE', current_date - 2, current_date - 1, 'Hibernate', 'TECHSPECIALIST', 2, null, 8),
+                                                                                                                          ('Task #3 on Hibernate Core', 'DONE', current_date - 2, current_date - 1, 'Hibernate', 'TECHSPECIALIST', 2, null, 8),
+                                                                                                                          ('Task #1 on Hibernate Entities', 'PROGRESS', current_date - 1, current_date, 'Hibernate', 'TECHSPECIALIST', 1, null, 9),
+                                                                                                                          ('Task #2 on Hibernate Entities', 'PROGRESS', current_date - 1, current_date, 'Hibernate', 'TECHSPECIALIST', 1, null, 9);
